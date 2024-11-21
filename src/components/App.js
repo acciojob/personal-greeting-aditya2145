@@ -4,10 +4,10 @@ import { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
 
   const handleChange = (e) => {
-    setName(e.target.value);
+    setUserName(e.target.value);
   }  
   
   return (
@@ -15,7 +15,7 @@ const App = () => {
         {/* Do not remove the main div */}
         <label htmlFor='name' >Enter your name:</label>
         <input id='name' type='text' onChange={handleChange}  />
-        {name && <p>Hello {name}!</p>}
+        {userName && <p>Hello {userName}!</p>}
     </div>
   )
 }
